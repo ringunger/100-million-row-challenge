@@ -1,5 +1,8 @@
 > [!IMPORTANT]
 > The 100-million-row challenge is now **live**. You have until March 15, 11:59PM CET to submit your entry!
+
+> [!CAUTION]
+> Because of the huge number of participants, we're currently in the process of automating the benchmark further and running it in a more consistent environment. This may cause some delays in your PRs being benchmarked.
     
 Welcome to the 100-million-row challenge in PHP! Your goal is to parse a data set of page visits into a JSON file. This repository contains all you need to get started locally. Submitting an entry is as easy as sending a pull request to this repository. This competition will run for two weeks: from Feb 24 to March 15, 2026. When it's done, the top three fastest solutions will win a prize! 
 
@@ -87,7 +90,7 @@ Prizes are sponsored by [PhpStorm](https://www.jetbrains.com/phpstorm/) and [Tid
 
 All entries must be submitted before March 16, 2026 (so you have until March 15, 11:59PM CET to submit). Any entries submitted after the cutoff date won't be taken into account.
 
-First place will get:
+**First place** will get:
 
 - One PhpStorm Elephpant
 - One Tideways Elephpant
@@ -95,17 +98,22 @@ First place will get:
 - Three-month JetBrains AI Ultimate license
 - One-year Tideways Team license
 
-Second place will get:
+**Second place** will get:
 
 - One PhpStorm Elephpant
 - One Tideways Elephpant
 - One-year JetBrains all-products pack license
 - Three-month JetBrains AI Ultimate license
 
-Third place will get:
+**Third place** will get:
 
 - One PhpStorm Elephpant
 - One Tideways Elephpant
+- One-year JetBrains all-products pack license
+
+Then, there are two more prizes to win: one for the **fastest single-core submission**, and one participation prize (a random winner picked from all entries). Both will get:
+
+- One PhpStorm Elephpant
 - One-year JetBrains all-products pack license
 
 #### Where can I see the results?
@@ -114,17 +122,17 @@ The benchmark results of each run are stored in [leaderboard.csv](./leaderboard.
 
 #### What kind of server is used for the benchmark?
 
-The benchmark runs on a Premium Intel Digital Ocean Droplet with 2vCPUs and 1.5GB of available memory. We deliberately chose not to use a more powerful server because we like to test in a somewhat "standard" environment for PHP. These PHP extensions are available:
+The benchmark runs on a Mac Mini M1 with 12GB of RAM of available memory. These PHP extensions are available:
 
 ```txt
-bcmath, calendar, Core, ctype, curl, date, dom, exif, fileinfo, filter, ftp, gd, gettext, gmp, hash, iconv, igbinary, imagick, imap, intl, json, lexbor, libxml, mbstring, memcached, msgpack, mysqli, mysqlnd, openssl, pcntl, pcre, PDO, pdo_mysql, pdo_pgsql, pdo_sqlite, pgsql, Phar, posix, random, readline, redis, Reflection, session, shmop, SimpleXML, soap, sockets, sodium, SPL, sqlite3, standard, sysvmsg, sysvsem, sysvshm, tokenizer, uri, xml, xmlreader, xmlwriter, xsl, Zend OPcache, zip, zlib, Zend OPcache
+bcmath, bz2, calendar, Core, ctype, curl, date, dba, dom, exif, fileinfo, filter, ftp, gd, gettext, gmp, hash, iconv, igbinary, intl, json, ldap, lexbor, libxml, mbstring, mysqli, mysqlnd, odbc, openssl, pcntl, pcre, PDO, pdo_dblib, pdo_mysql, PDO_ODBC, pdo_pgsql, pdo_sqlite, pgsql, Phar, posix, random, readline, Reflection, session, shmop, SimpleXML, snmp, soap, sockets, sodium, SPL, sqlite3, standard, sysvmsg, sysvsem, sysvshm, tidy, tokenizer, uri, xml, xmlreader, xmlwriter, xsl, Zend OPcache, zip, zlib, Zend OPcache
 ```
 
 #### How to ensure fair results?
 
 Each submission will be manually verified before its benchmark is run on the benchmark server. We'll also only ever run one single submission at a time to prevent any bias in the results. Additionally, we'll use a consistent, dedicated server to run benchmarks on to ensure that the results are comparable.
 
-If needed, multiple runs will be performed for the top submissions, and their average will be compared.
+If needed, multiple runs will be performed for the top submissions, and their average will be compared. When the challenge is done, the top-5 results will be run multiple times, and we'll take their average result to determine the final score. 
 
 Finally, everyone is asked to respect other participant's entries. You can look at others for inspiration (simply because there's no way we can prevent that from happening), but straight-up copying other entries is prohibited. We'll try our best to watch over this. If you run into any issues, feel free to tag @brendt or @xHeaven in the PR comments.
 
